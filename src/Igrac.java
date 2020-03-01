@@ -14,4 +14,7 @@ public class Igrac {
     public String getPozicija() {
         return pozicija;
     }
+    public void print(){
+        System.out.print(ime + " (" + pozicija + ") ");
+    }
 }

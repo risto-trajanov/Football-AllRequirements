@@ -19,9 +19,24 @@ public class Kolo {
         natprevari.add(natprevar);
     }
 
-    public void print(){
-        for (int i = 0; i < natprevari.size(); i++) {
-            natprevari.get(i).print();
+    public void print(boolean sorted){
+        if(sorted){
+            System.out.println("Finished: ");
+            for (int i = 0; i < natprevari.size(); i++) {
+                if(natprevari.get(i).isZavrshen()){
+                    natprevari.get(i).print();
+                }
+            }
+            System.out.println("Ongoing: ");
+            for (int i = 0; i < natprevari.size(); i++) {
+                if(!natprevari.get(i).isZavrshen()){
+                    natprevari.get(i).print();
+                }
+            }
+        }else {
+            for (int i = 0; i < natprevari.size(); i++) {
+                natprevari.get(i).print();
+            }
         }
     }
 }

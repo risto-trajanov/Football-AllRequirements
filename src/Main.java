@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,10 +19,33 @@ public class Main {
         barca.addIgrac(igrac4);
         barca.addIgrac(igrac5);
         barca.addIgrac(igrac6);
-        Natprevar elClasico = new Natprevar(real, barca, 2, 3, true);
+        Natprevar elClasico = new Natprevar(real, barca);
+        Natprevar nat1 = new Natprevar(real, barca);
+        Natprevar nat2 = new Natprevar(real, barca);
+        elClasico.dadeGol(igrac1);
+        elClasico.dadeGol(igrac4);
         Kolo premierLiga = new Kolo("Premier");
         premierLiga.addNatprevar(elClasico);
-        premierLiga.print();
+        premierLiga.addNatprevar(nat1);
+        premierLiga.addNatprevar(nat2);
+        boolean sorted = false;
+        while (true){
+            System.out.println("Vnesi true/false");
+            Scanner scanner = new Scanner(System.in);
+            String input = scanner.nextLine();
+            if(input.equals("true")){
+                sorted = true;
+                break;
+            }
+            if(input.equals("false")){
+                sorted = false;
+                break;
+            }
+        }
+
+
+        premierLiga.print(sorted);
+
 
     }
 }
