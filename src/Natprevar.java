@@ -32,9 +32,9 @@ public class Natprevar {
 
     public void print() {
         if(isZavrshen){
-            if(poenterDoma.size()+1 > poenterGosti.size()+1){
+            if(poenterDoma.size() > poenterGosti.size()){
                 System.out.println(doma.getIme().toUpperCase() + " " + poenterDoma.size() + ":" + poenterGosti.size() + " " + gosti.getIme().toLowerCase() + " - finished");
-            } else if (poenterGosti.size()+1 > poenterDoma.size()+1){
+            } else if (poenterGosti.size() > poenterDoma.size()){
                 System.out.println(doma.getIme().toLowerCase() + " " + poenterDoma.size() + ":" + poenterGosti.size() + " " + gosti.getIme().toUpperCase() + " - finished");
             } else {
                 System.out.println(doma.getIme().toLowerCase() + " " + poenterDoma.size() + ":" + poenterGosti.size() + " " + gosti.getIme().toLowerCase() + " - finished");
